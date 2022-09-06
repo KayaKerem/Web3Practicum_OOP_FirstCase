@@ -1,3 +1,4 @@
+from datetime import date
 class Vehicle:
     def __init__(self,hgsNumber,name,date,balance):
        self.hgsNumber=hgsNumber
@@ -36,7 +37,7 @@ class Gise:
             print("Failed => Insufficient balance")
             vehicle.balance += vehicle.fee
 
-    def getTotalIncome(self,date):
+    def getTotalIncome(self,date=date.today()):
         total=0
         for i in self.listOfCars:
             if(i.date == date):
